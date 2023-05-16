@@ -14,7 +14,7 @@
         "test:update-snapshots":
         "eslint index.js && npm run download-pinned-govulners-db && GOVULNERS_DB_AUTO_UPDATE=false GOVULNERS_DB_CACHE_DIR=./govulners-db GOVULNERS_DB_VALIDATE_AGE=false jest --updateSnapshot",
         "download-pinned-govulners-db":
-        "mkdir -p govulners-db/5 && curl -sL https://toolbox-data.nextlinux.io/govulners/databases/vulnerability-db_v5_2022-10-17T08:14:57Z_b50a86ce07d268101316.tar.gz | tar zxf - -C govulners-db/5",
+        "mkdir -p govulners-db/5 && curl -sL https://toolbox-data.anchore.io/grype/databases/vulnerability-db_v5_2022-10-17T08:14:57Z_b50a86ce07d268101316.tar.gz | tar zxf - -C govulners-db/5",
         "build": "ncc build ./index.js",
         "precommit": "pretty-quick --staged && npm run build && git add dist/",
         "prepare": "husky install",

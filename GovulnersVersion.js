@@ -1,0 +1,1 @@
+exports.GOVULNERS_VERSION = "v0.60.0";
